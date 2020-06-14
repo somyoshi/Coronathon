@@ -8,8 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class Stepper1Component implements OnInit {
 
-  nome ='Bruno Costa';
-
+  nome="dfuhe"
 
   constructor() { }
 

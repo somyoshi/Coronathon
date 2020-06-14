@@ -8,8 +8,8 @@ import { faLongArrowAltLeft } from '@fortawesome/free-solid-svg-icons';
 })
 export class Stepper2Component implements OnInit {
   faLongArrowAltLeft = faLongArrowAltLeft;
-  @Input() nome: string;
-  
+  @Input() model: any;
+
   constructor() { }
 
   ngOnInit(): void {
