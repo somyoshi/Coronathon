@@ -18,7 +18,6 @@ export class Stepper5Component implements OnInit {
 
   ngOnInit() {
     this.init();
-    this.isEntrepreneur();
     this.formModel.count = 5;
   }
 
@@ -29,12 +28,4 @@ export class Stepper5Component implements OnInit {
     });
   }
 
-  entrepreneur:string = '/home/intro/stepper8';
-
-  isEntrepreneur(){
-    console.log(this.formModel.statusProfissional == "empreendedor")
-    if(this.formModel.statusProfissional == "empreendedor"){
-      this.entrepreneur = '/home/intro/stepper6';
-    }
-  }
 }

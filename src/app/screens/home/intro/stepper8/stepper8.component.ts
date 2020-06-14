@@ -19,7 +19,6 @@ export class Stepper8Component implements OnInit {
   ngOnInit() {
     this.init();
     this.formModel.count = 8;
-    this.isEntrepreneur();
   }
 
   init() {
@@ -28,12 +27,6 @@ export class Stepper8Component implements OnInit {
     });
   }
 
-  entrepreneur:string = '/home/intro/stepper7';
-
-  isEntrepreneur(){
-    if(this.formModel.statusProfissional === "empreendedor"){
-      this.entrepreneur = '/home/intro/stepper5';
-    }
-  }
+  
 
 }
