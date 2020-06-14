@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Http } from '@angular/http';
-import { Question } from '../entities/question';
+import { QuestionModel } from '../entities/question.model';
 
 @Injectable()
 export class ApiService {
@@ -10,7 +10,7 @@ export class ApiService {
 
 
     getQuestions() {
-        return new Promise<Question[]>((resolve, reject) => {
+        return new Promise<QuestionModel[]>((resolve, reject) => {
             this.http.get(this.endPoint).subscribe(async response => {
                 console.log(response.json());
                 resolve([]);

@@ -6,9 +6,9 @@
     <div class="row">
         <div class="col-md-4">
           <div class="form-group mb-4">
-              <input type="text" class="form-control question-input" name="nome" [(ngModel)]="nome">
+              <input type="text" class="form-control question-input" name="nickName" [(ngModel)]="formModel.nickName">
           </div>
-          <button class="btn btn-primary" [routerLink]="['/home/intro/stepper2']">Próxima</button> pressione Enter <fa-icon [icon]="faExternalLinkAlt"></fa-icon>
+          <button class="btn btn-primary" [routerLink]="['/home/intro/stepper2', {formModel:formModel | json}]">Próxima</button> pressione Enter <fa-icon [icon]="faExternalLinkAlt"></fa-icon>
         </div>
     </div>
   </form>

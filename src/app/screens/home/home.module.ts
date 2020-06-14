@@ -9,10 +9,11 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { Stepper3Component } from './intro/stepper3/stepper3.component';
+import { ResultsComponent } from './intro/results/results.component';
 
 
 @NgModule({
-  declarations: [HomeComponent, IntroComponent, Stepper1Component, Stepper2Component, Stepper3Component],
+  declarations: [HomeComponent, IntroComponent, Stepper1Component, Stepper2Component, Stepper3Component, ResultsComponent],
   imports: [
     CommonModule,
     BrowserModule,

@@ -7,6 +7,7 @@ import { HomeModule } from './screens/home/home.module';
 import { ApiService } from './models/services/api.service';
 import { Http, HttpModule } from '@angular/http';
 import { APP_BASE_HREF } from '@angular/common';
+import { DashboardModule } from './screens/dashboard/dashboard.module';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { APP_BASE_HREF } from '@angular/common';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    DashboardModule,
     HomeModule,
     HttpModule
   ],

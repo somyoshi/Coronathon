@@ -1,5 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
+import { ActivatedRoute } from '@angular/router';
+import { FormModel } from 'src/app/models/entities/form.model';
 
 @Component({
   selector: 'app-stepper3',
@@ -8,11 +10,24 @@ import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
 })
 export class Stepper3Component implements OnInit {
   faExternalLinkAlt = faExternalLinkAlt
-  @Input() model: any;
+  formModel: FormModel;
 
-  constructor() { }
+  constructor(private route: ActivatedRoute) {
+    this.formModel = new FormModel();
+  }
 
-  ngOnInit(): void {
+  ngOnInit() {
+    this.init();
+  }
+
+  init() {
+    this.route.params.subscribe(params => {
+      this.formModel = JSON.parse(params["formModel"]);
+    });
+  }
+
+  teste(){
+    console.log(this.formModel);
   }
 
 }

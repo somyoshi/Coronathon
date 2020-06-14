@@ -1,4 +1,4 @@
-export class Profile{
+export class ProfileModel{
     name:string
     age:number;
 

@@ -9,21 +9,20 @@
     <h4 class="my-3">Vale tudo, desde uma atividade simples que você fez em casa para ganhar aquela graninha extra, até uma empres com diversos funcionários.</h4>
     <form class="mt-4 mb-3">
       <li>
-        <input type="radio" id="f-option" name="selector">
-        <label for="f-option">Já empreendi antes</label>
-        
+        <input type="radio" id ='yes' name="jaEmpreendeu" [(ngModel)]="formModel.jaEmpreendeu" [value]="true">
+        <label for="yes">Já empreendi antes</label>
         <div class="check"></div>
       </li>
       
       <li>
-        <input type="radio" id="s-option" name="selector">
-        <label for="s-option">Nunca, tenho vontade de empreender pela primeira vez</label>
+        <input type="radio" id ='no' name="jaEmpreendeu" [(ngModel)]="formModel.jaEmpreendeu" [value]="false" >
+        <label for="no">Nunca, tenho vontade de empreender pela primeira vez</label>
         
         <div class="check"><div class="inside"></div></div>
       </li>
     </form>
     <div class="d-relative">
-        <button class="btn btn-primary mt-4" [routerLink]="['/home/intro/stepper3']">Próxima</button>
+        <button class="btn btn-primary mt-4" [routerLink]="['/home/intro/stepper3', {formModel:formModel | json}]">Próxima</button>
         <span class="pt-4 align-middle"> pressione Enter <fa-icon [icon]="faExternalLinkAlt"></fa-icon></span>
     </div>
 </div>

@@ -8,23 +8,24 @@
             <div class="col-md-6">
                 <div class="form-group">
                     <label class="col-form-label"><h3>Nome</h3></label>
-                    <input type="text" class="form-control question-input">
+                    <input type="text" class="form-control question-input" name="nome" [(ngModel)]="formModel.nome">
                 </div>
             </div>
             <div class="col-md-6">
                 <div class="form-group">
                     <label class="col-form-label"><h3>Sobrenome</h3></label>
-                    <input type="text" class="form-control question-input">
+                    <input type="text" class="form-control question-input" name="sobreNome" [(ngModel)]="formModel.sobreNome">
                 </div>
             </div>
             <div class="col-md-12">
                 <div class="form-group">
                     <label class="col-form-label"><h3>E-mail</h3></label>
-                    <input type="text" class="form-control question-input">
+                    <input type="text" class="form-control question-input" name="email" [(ngModel)]="formModel.email">
                 </div>
             </div>
             <div class="col-md-6">
-                <button type="button" class="btn btn-primary">Salvar resultados</button> pressione Enter <fa-icon [icon]="faExternalLinkAlt"></fa-icon>
+                <button type="button" class="btn btn-primary" [routerLink]="['/home/intro/results', {formModel:formModel | json}]">Finalizar</button>
+                 pressione Enter <fa-icon [icon]="faExternalLinkAlt"></fa-icon>
             </div>
         </div>
     </form>

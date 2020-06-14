@@ -1,4 +1,4 @@
-export class Question{
+export class QuestionModel{
     id:string;
     title:string;
     answer:string;
