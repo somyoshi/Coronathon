@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { faLongArrowAltLeft } from '@fortawesome/free-solid-svg-icons';
+import { faArrowCircleLeft } from '@fortawesome/free-solid-svg-icons';
+import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-stepper2',
@@ -7,7 +8,8 @@ import { faLongArrowAltLeft } from '@fortawesome/free-solid-svg-icons';
   styleUrls: ['./stepper2.component.css']
 })
 export class Stepper2Component implements OnInit {
-  faLongArrowAltLeft = faLongArrowAltLeft;
+  faArrowCircleLeft = faArrowCircleLeft
+  faExternalLinkAlt = faExternalLinkAlt
   @Input() model: any;
 
   constructor() { }

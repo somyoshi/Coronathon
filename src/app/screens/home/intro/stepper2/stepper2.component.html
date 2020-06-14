@@ -1,45 +1,29 @@
-<div style="margin-top:30%">
+<div style="margin-top:30%" id="question">
     <h1>
-        <a [routerLink]="['/home/intro/stepper1']" style="color:black"><fa-icon [icon]="faLongArrowAltLeft"></fa-icon></a>
+        <a [routerLink]="['/home/intro/stepper1']" style="color:black; position: absolute; margin-left: -2em; margin-top: 0.07em; color: #444;">
+            <fa-icon [icon]="faArrowCircleLeft"></fa-icon>
+        </a>
         
-        Deseja salvar os resultados?
+        Você já teve algum negócio próprio anteriormente?
     </h1>
-    <h3>Além de acompanhar sua evolução, cadastrar um perfil permite acesso a cursos SENAI direcionados as suas
-        necessidades e mentorias com nossos especialistas.</h3>
-    <form>
-        <div class="row">
-            <div class="col-md-6">
-                <div class="form-group">
-                    <label class="col-form-label"><h3>Nome</h3></label>
-                    <input type="text" class="form-control">
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="form-group">
-                    <label class="col-form-label"><h3>Sobrenome</h3></label>
-                    <input type="text" class="form-control">
-                </div>
-            </div>
-            <div class="col-md-12">
-                <div class="form-group">
-                    <label class="col-form-label"><h3>E-mail</h3></label>
-                    <input type="text" class="form-control">
-                </div>
-            </div>
-            <div class="col-md-6">
-                <button type="button" class="btn btn-primary">Ir para resultados</button>
-            </div>
-        </div>
+    <h4 class="my-3">Vale tudo, desde uma atividade simples que você fez em casa para ganhar aquela graninha extra, até uma empres com diversos funcionários.</h4>
+    <form class="mt-4 mb-3">
+      <li>
+        <input type="radio" id="f-option" name="selector">
+        <label for="f-option">Já empreendi antes</label>
+        
+        <div class="check"></div>
+      </li>
+      
+      <li>
+        <input type="radio" id="s-option" name="selector">
+        <label for="s-option">Nunca, tenho vontade de empreender pela primeira vez</label>
+        
+        <div class="check"><div class="inside"></div></div>
+      </li>
     </form>
+    <div class="d-relative">
+        <button class="btn btn-primary mt-4" [routerLink]="['/home/intro/stepper3']">Próxima</button>
+        <span class="pt-4 align-middle"> pressione Enter <fa-icon [icon]="faExternalLinkAlt"></fa-icon></span>
+    </div>
 </div>
-
-
-<!--   <div class="form-group">
-    <label for="recipient-name" class="col-form-label">Recipient:</label>
-    <select class="custom-select">
-      <option selected>Open this select menu</option>
-      <option value="1">One</option>
-      <option value="2">Two</option>
-      <option value="3">Three</option>
-    </select>
-  </div> -->

@@ -1,15 +1,15 @@
 <div style="margin-top:30%">
-    <h1>
-      Como podemos te chamar?
-    </h1>
-    <form>
-      <div class="row">
-          <div class="col-md-4">
-            <div class="form-group">
-                <input type="text" class="form-control" name="nome" [(ngModel)]="nome">
-              </div>
-              <button  class="btn btn-primary" [routerLink]="['/home/intro/stepper2']">Próxima</button>
+  <h1 class="mb-5">
+    Como podemos te chamar?
+  </h1>
+  <form>
+    <div class="row">
+        <div class="col-md-4">
+          <div class="form-group mb-4">
+              <input type="text" class="form-control question-input" name="nome" [(ngModel)]="nome">
           </div>
-      </div>
-    </form>
-  </div>
+          <button class="btn btn-primary" [routerLink]="['/home/intro/stepper2']">Próxima</button> pressione Enter <fa-icon [icon]="faExternalLinkAlt"></fa-icon>
+        </div>
+    </div>
+  </form>
+</div>

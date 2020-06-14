@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-stepper1',
@@ -7,8 +7,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./stepper1.component.css']
 })
 export class Stepper1Component implements OnInit {
+  faExternalLinkAlt = faExternalLinkAlt
 
-  nome="dfuhe"
+  nome=""
 
   constructor() { }
 
