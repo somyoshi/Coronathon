@@ -10,7 +10,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 
 
-
 @NgModule({
   declarations: [HomeComponent, IntroComponent, Stepper1Component, Stepper2Component],
   imports: [

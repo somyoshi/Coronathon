@@ -1,5 +1,8 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { faLongArrowAltLeft } from '@fortawesome/free-solid-svg-icons';
+import { ActivatedRoute } from '@angular/router';
+import { Profile } from 'src/app/models/entities/profile';
+import { ApiService } from 'src/app/models/services/api.service';
 
 @Component({
   selector: 'app-stepper2',
@@ -8,11 +11,24 @@ import { faLongArrowAltLeft } from '@fortawesome/free-solid-svg-icons';
 })
 export class Stepper2Component implements OnInit {
   faLongArrowAltLeft = faLongArrowAltLeft;
-  @Input() model: any;
+  profile: Profile;
 
-  constructor() { }
+  constructor(private route: ActivatedRoute, private apiService:ApiService) {
 
-  ngOnInit(): void {
+  }
+
+  ngOnInit() {
+    this.init();
+  }
+
+  init() {
+    this.route.params.subscribe(params => {
+      this.profile = JSON.parse(params["profile"]);
+    });
+  }
+
+  testeApi() {
+    this.apiService.getQuestions();
   }
 
 }

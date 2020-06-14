@@ -11,7 +11,7 @@
             <div class="col-md-6">
                 <div class="form-group">
                     <label class="col-form-label"><h3>Nome</h3></label>
-                    <input type="text" class="form-control">
+                    <input type="text" class="form-control" name="name" [(ngModel)]="profile.name">
                 </div>
             </div>
             <div class="col-md-6">
@@ -27,7 +27,7 @@
                 </div>
             </div>
             <div class="col-md-6">
-                <button type="button" class="btn btn-primary">Ir para resultados</button>
+                <button type="button" class="btn btn-primary" (click)="testeApi()">Ir para resultados</button>
             </div>
         </div>
     </form>

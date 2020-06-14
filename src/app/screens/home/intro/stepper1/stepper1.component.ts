@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Profile } from 'src/app/models/entities/profile';
 
 
 @Component({
@@ -8,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class Stepper1Component implements OnInit {
 
-  nome="dfuhe"
+  profile:Profile = new Profile();
 
   constructor() { }
 
