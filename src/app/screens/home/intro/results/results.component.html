@@ -30,7 +30,7 @@
           <p><strong>Classificação: </strong>Iniciante</p>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-primary" data-dismiss="modal" [routerLink]="['/dashboard']">Acessar Plataforma</button>
+          <button type="button" class="btn btn-primary" data-dismiss="modal" [routerLink]="['/dashboard', {formModel:formModel | json}]">Acessar Plataforma</button>
         </div>
       </div>
     </div>

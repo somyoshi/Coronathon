@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {  faBars } from '@fortawesome/free-solid-svg-icons';
+import {  faBars, faAlignRight, faAlignLeft } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-header',
@@ -7,7 +7,7 @@ import {  faBars } from '@fortawesome/free-solid-svg-icons';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-  faBars = faBars
+  faBars = faAlignLeft
 
   constructor() { }
 

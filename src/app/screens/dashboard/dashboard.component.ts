@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { FormModel } from 'src/app/models/entities/form.model';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-dashboard',
@@ -7,9 +9,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DashboardComponent implements OnInit {
 
-  constructor() { }
+  formModel: FormModel = new FormModel();
 
-  ngOnInit(): void {
+  constructor(private route: ActivatedRoute) {
+
+  }
+
+  ngOnInit() {
+    this.init();
+
+  }
+
+  init() {
+    this.route.params.subscribe(params => {
+      this.formModel = JSON.parse(params["formModel"]);
+    });
   }
 
 }
