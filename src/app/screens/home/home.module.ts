@@ -11,7 +11,6 @@ import { FormsModule } from '@angular/forms';
 import { Stepper3Component } from './intro/stepper3/stepper3.component';
 
 
-
 @NgModule({
   declarations: [HomeComponent, IntroComponent, Stepper1Component, Stepper2Component, Stepper3Component],
   imports: [

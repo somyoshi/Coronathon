@@ -1,6 +1,9 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { faArrowCircleLeft } from '@fortawesome/free-solid-svg-icons';
 import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
+import { ActivatedRoute } from '@angular/router';
+import { Profile } from 'src/app/models/entities/profile';
+import { ApiService } from 'src/app/models/services/api.service';
 
 @Component({
   selector: 'app-stepper2',
@@ -12,9 +15,22 @@ export class Stepper2Component implements OnInit {
   faExternalLinkAlt = faExternalLinkAlt
   @Input() model: any;
 
-  constructor() { }
+  constructor(private route: ActivatedRoute, private apiService:ApiService) {
 
-  ngOnInit(): void {
+  }
+
+  ngOnInit() {
+    this.init();
+  }
+
+  init() {
+    this.route.params.subscribe(params => {
+      this.profile = JSON.parse(params["profile"]);
+    });
+  }
+
+  testeApi() {
+    this.apiService.getQuestions();
   }
 
 }

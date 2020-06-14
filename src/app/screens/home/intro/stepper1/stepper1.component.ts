@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
+import { Profile } from 'src/app/models/entities/profile';
 
 @Component({
   selector: 'app-stepper1',
@@ -9,7 +10,7 @@ import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
 export class Stepper1Component implements OnInit {
   faExternalLinkAlt = faExternalLinkAlt
 
-  nome=""
+  profile:Profile = new Profile();
 
   constructor() { }
 
