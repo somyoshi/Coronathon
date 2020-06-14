@@ -1,0 +1,29 @@
+<div style="margin-top:30%" id="question">
+    <h3>{{ formModel.count }}/10</h3>
+    <h1>
+        <a [routerLink]="['/home/intro/stepper6']" style="color:black; position: absolute; margin-left: -2em; margin-top: 0.07em; color: #444;">
+            <fa-icon [icon]="faArrowCircleLeft"></fa-icon>
+        </a>
+        
+        Você julga suas habilidades de negócio boas o suficiente para empreender?
+    </h1>
+    <h4 class="my-3">Todos temos o que melhorar, a ideia é entendermos apenas se você se sente confiante de que conseguiria sobrepor qualquer desafio que aparecesse na sua jornada empreendedora.</h4>
+    <form class="mt-4 mb-3">
+      <li>
+        <input type="radio" id ='yes' name="habilidadesSuficientes" [(ngModel)]="formModel.habilidadesSuficientes" [value]="true">
+        <label for="yes">Sim, me sinto preparado e trenho experiẽncia no assunto</label>
+        <div class="check"></div>
+      </li>
+      
+      <li>
+        <input type="radio" id ='no' name="habilidadesSuficientes" [(ngModel)]="formModel.habilidadesSuficientes" [value]="false" >
+        <label for="no">Não, acho que ainda preciso me desenvolver mais</label>
+        
+        <div class="check"><div class="inside"></div></div>
+      </li>
+    </form>
+    <div class="d-relative">
+        <button class="btn btn-primary mt-4" [routerLink]="['/home/intro/stepper8', {formModel:formModel | json}]">Próxima</button>
+        <span class="pt-4 align-middle"> pressione Enter <fa-icon [icon]="faExternalLinkAlt"></fa-icon></span>
+    </div>
+</div>

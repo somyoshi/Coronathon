@@ -15,6 +15,7 @@ export class Stepper1Component implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+  	this.formModel.count = 1;
   }
 
 }

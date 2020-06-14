@@ -1,16 +1,14 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { faArrowCircleLeft } from '@fortawesome/free-solid-svg-icons';
 import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
 import { ActivatedRoute } from '@angular/router';
 import { FormModel } from 'src/app/models/entities/form.model';
 
 @Component({
-  selector: 'app-stepper3',
-  templateUrl: './stepper3.component.html',
-  styleUrls: ['./stepper3.component.css']
+  selector: 'app-stepper11',
+  templateUrl: './stepper11.component.html',
+  styleUrls: ['./stepper11.component.css']
 })
-export class Stepper3Component implements OnInit {
-  faArrowCircleLeft = faArrowCircleLeft
+export class Stepper11Component implements OnInit {
   faExternalLinkAlt = faExternalLinkAlt
   formModel: FormModel;
 
@@ -18,13 +16,16 @@ export class Stepper3Component implements OnInit {
 
   ngOnInit() {
     this.init();
-    this.formModel.count = 3;
   }
 
   init() {
     this.route.params.subscribe(params => {
       this.formModel = JSON.parse(params["formModel"]);
     });
+  }
+
+  teste(){
+    console.log(this.formModel);
   }
 
 }

@@ -1,0 +1,33 @@
+<div style="margin-top:30%" id="question">
+    <h3>{{ formModel.count }}/10</h3>
+    <h1>
+        <a [routerLink]="['/home/intro/stepper4']" style="color:black; position: absolute; margin-left: -2em; margin-top: 0.07em; color: #444;">
+            <fa-icon [icon]="faArrowCircleLeft"></fa-icon>
+        </a>
+        
+        Você está atualmente empreendendo, empregado ou desempregado?
+    </h1>
+    <h4 class="my-3"></h4>
+    <form class="mt-4 mb-3">
+      <li>
+        <input type="radio" id ='empreendedor' name="statusProfissional" [(ngModel)]="formModel.statusProfissional" [value]="'empreendedor'">
+        <label for="empreendedor">Estou empreendendo</label>
+        <div class="check"></div>
+      </li>
+      <li>
+        <input type="radio" id ='empregado' name="statusProfissional" [(ngModel)]="formModel.statusProfissional" [value]="'empregado'">
+        <label for="empregado">Sou funcionário de uma empresa</label>
+        <div class="check"><div class="inside"></div></div>
+      </li>
+      <li>
+        <input type="radio" id ='desempregado' name="statusProfissional" [(ngModel)]="formModel.statusProfissional" [value]="'desempregado'" >
+        <label for="desempregado">Estou desempregado</label>
+        
+        <div class="check"><div class="inside"></div></div>
+      </li>
+    </form>
+    <div class="d-relative">
+        <button class="btn btn-primary mt-4" [routerLink]="[entrepreneur, {formModel:formModel | json}]">Próxima</button>
+        <span class="pt-4 align-middle"> pressione Enter <fa-icon [icon]="faExternalLinkAlt"></fa-icon></span>
+    </div>
+</div>

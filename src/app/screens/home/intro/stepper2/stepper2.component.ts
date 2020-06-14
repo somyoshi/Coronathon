@@ -14,12 +14,11 @@ export class Stepper2Component implements OnInit {
   faExternalLinkAlt = faExternalLinkAlt
   formModel: FormModel;
 
-  constructor(private route: ActivatedRoute) {
-    this.formModel = new FormModel();
-  }
+  constructor(private route: ActivatedRoute) {}
 
   ngOnInit() {
     this.init();
+    this.formModel.count = 2;
   }
 
   init() {
@@ -27,5 +26,5 @@ export class Stepper2Component implements OnInit {
       this.formModel = JSON.parse(params["formModel"]);
     });
   }
-
+  
 }

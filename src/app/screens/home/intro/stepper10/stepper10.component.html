@@ -1,0 +1,19 @@
+<div style="margin-top:30%">
+  <h3>{{ formModel.count }}/10</h3>
+  <h1 class="mb-5">
+    <a [routerLink]="['/home/intro/stepper9']" style="color:black; position: absolute; margin-left: -2em; margin-top: 0.07em; color: #444;">
+        <fa-icon [icon]="faArrowCircleLeft"></fa-icon>
+    </a>
+    Na sua opinião, quais são as principais vantagens de ter seu próprio negócio?
+  </h1>
+  <form>
+    <div class="row">
+        <div class="col-md-4">
+          <div class="form-group mb-4">
+              <input type="text" class="form-control question-input" name="vantagensEmpreender" [(ngModel)]="formModel.vantagensEmpreender">
+          </div>
+          <button class="btn btn-primary" [routerLink]="['/home/intro/stepper11', {formModel:formModel | json}]">Próxima</button> pressione Enter <fa-icon [icon]="faExternalLinkAlt"></fa-icon>
+        </div>
+    </div>
+  </form>
+</div>

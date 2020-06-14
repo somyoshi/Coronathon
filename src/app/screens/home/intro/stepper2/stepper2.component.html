@@ -1,28 +1,19 @@
-<div style="margin-top:30%" id="question">
-    <h1>
-        <a [routerLink]="['/home/intro/stepper1']" style="color:black; position: absolute; margin-left: -2em; margin-top: 0.07em; color: #444;">
-            <fa-icon [icon]="faArrowCircleLeft"></fa-icon>
-        </a>
-        
-        Você já teve algum negócio próprio anteriormente?
-    </h1>
-    <h4 class="my-3">Vale tudo, desde uma atividade simples que você fez em casa para ganhar aquela graninha extra, até uma empres com diversos funcionários.</h4>
-    <form class="mt-4 mb-3">
-      <li>
-        <input type="radio" id ='yes' name="jaEmpreendeu" [(ngModel)]="formModel.jaEmpreendeu" [value]="true">
-        <label for="yes">Já empreendi antes</label>
-        <div class="check"></div>
-      </li>
-      
-      <li>
-        <input type="radio" id ='no' name="jaEmpreendeu" [(ngModel)]="formModel.jaEmpreendeu" [value]="false" >
-        <label for="no">Nunca, tenho vontade de empreender pela primeira vez</label>
-        
-        <div class="check"><div class="inside"></div></div>
-      </li>
-    </form>
-    <div class="d-relative">
-        <button class="btn btn-primary mt-4" [routerLink]="['/home/intro/stepper3', {formModel:formModel | json}]">Próxima</button>
-        <span class="pt-4 align-middle"> pressione Enter <fa-icon [icon]="faExternalLinkAlt"></fa-icon></span>
+<div style="margin-top:30%">
+  <h3>{{ formModel.count }}/10</h3>
+  <h1 class="mb-5">
+    <a [routerLink]="['/home/intro/stepper1']" style="color:black; position: absolute; margin-left: -2em; margin-top: 0.07em; color: #444;">
+        <fa-icon [icon]="faArrowCircleLeft"></fa-icon>
+    </a>
+    Quantos anos você tem?
+  </h1>
+  <form>
+    <div class="row">
+        <div class="col-md-4">
+          <div class="form-group mb-4">
+              <input type="text" class="form-control question-input" name="idade" [(ngModel)]="formModel.idade">
+          </div>
+          <button class="btn btn-primary" [routerLink]="['/home/intro/stepper3', {formModel:formModel | json}]">Próxima</button> pressione Enter <fa-icon [icon]="faExternalLinkAlt"></fa-icon>
+        </div>
     </div>
+  </form>
 </div>

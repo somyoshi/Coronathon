@@ -1,0 +1,29 @@
+<div style="margin-top:30%" id="question">
+    <h3>{{ formModel.count }}/10</h3>
+    <h1>
+        <a [routerLink]="['/home/intro/stepper5']" style="color:black; position: absolute; margin-left: -2em; margin-top: 0.07em; color: #444;">
+            <fa-icon [icon]="faArrowCircleLeft"></fa-icon>
+        </a>
+        
+        Em qual mercado empreendeu?
+    </h1>
+    <h4 class="my-3">Essa informação diz bastante sobre suas preferências e passos anteriores.</h4>
+    <form class="mt-4 mb-3">
+      <li>
+        <input type="radio" id ='yes' name="jaEmpreendeu" [(ngModel)]="formModel.jaEmpreendeu" [value]="true">
+        <label for="yes">Já empreendi antes</label>
+        <div class="check"></div>
+      </li>
+      
+      <li>
+        <input type="radio" id ='no' name="jaEmpreendeu" [(ngModel)]="formModel.jaEmpreendeu" [value]="false" >
+        <label for="no">Nunca, tenho vontade de empreender pela primeira vez</label>
+        
+        <div class="check"><div class="inside"></div></div>
+      </li>
+    </form>
+    <div class="d-relative">
+        <button class="btn btn-primary mt-4" [routerLink]="['/home/intro/stepper7', {formModel:formModel | json}]">Próxima</button>
+        <span class="pt-4 align-middle"> pressione Enter <fa-icon [icon]="faExternalLinkAlt"></fa-icon></span>
+    </div>
+</div>

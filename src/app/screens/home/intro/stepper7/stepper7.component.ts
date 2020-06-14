@@ -5,11 +5,11 @@ import { ActivatedRoute } from '@angular/router';
 import { FormModel } from 'src/app/models/entities/form.model';
 
 @Component({
-  selector: 'app-stepper3',
-  templateUrl: './stepper3.component.html',
-  styleUrls: ['./stepper3.component.css']
+  selector: 'app-stepper7',
+  templateUrl: './stepper7.component.html',
+  styleUrls: ['./stepper7.component.css']
 })
-export class Stepper3Component implements OnInit {
+export class Stepper7Component implements OnInit {
   faArrowCircleLeft = faArrowCircleLeft
   faExternalLinkAlt = faExternalLinkAlt
   formModel: FormModel;
@@ -18,7 +18,7 @@ export class Stepper3Component implements OnInit {
 
   ngOnInit() {
     this.init();
-    this.formModel.count = 3;
+    this.formModel.count = 7;
   }
 
   init() {
