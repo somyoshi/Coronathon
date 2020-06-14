@@ -3,11 +3,92 @@
 <div class="content-wrapper">
     <div class="content-header">
         <div class="container-fluid">
-            <div class="row">
-                <div class="col-lg-12">                    
-                    <router-outlet></router-outlet>
+            <div class="col-md-12">
+                <div class="box-name">
+                    <h3>
+                        {{formModel.nome}} {{formModel.sobreNome}}
+                    </h3>
+                    <div class="row">
+                        <div class="col-md-2">
+                            <br>
+                            <p>Data de nascimento: </p>
+                            <p>06/06/1996</p>
+                        </div>
+                        <div class="col-md-2">
+                            <br>
+                            <p>E-mail:</p>
+                            <p>{{formModel.email}}</p>
+                        </div>
+                    </div>
                 </div>
             </div>
+            <div class="col-md-12">
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="box-progresso">
+                            <p style="font-size: 24px;">Meu Progresso</p>
+                            <strong>Você está no nível 1</strong>
+                            <p>Para ir para o nível 2, estude os circuitos de Finanças, Recursos Humanos e Marketing
+                                Digital.</p>
+
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <p style="font-size: 24px;">Skills</p>
+                                    <p style="line-height: 0.1;">Finanças 1/5</p>
+                                    <p style="line-height: 0.1;">Marketing Digital 2/5</p>
+                                    <p style="line-height: 0.1;">Recursos Humanos 2/5</p>
+                                </div>
+                                <div class="col-md-4">
+                                    <img src="assets/badge.png" alt="" style="height:85px">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-9">
+                        <div class="box-sugeridos">
+                            <p style="font-size: 24px;">Cursos Sugeridos</p>
+                            <div class="col-md-12">
+                                <div class="row">
+                                    <div class="box">
+                                        <img src="assets/db.png" alt="" class="custom-img">
+                                        <p style="margin-top: 30%; margin-bottom: -20px;">Finanças Básico</p>
+                                    </div>
+                                    <div class="box">
+                                        <img src="assets/db.png" alt="" class="custom-img">
+                                        <p style="margin-top: 30%; margin-bottom: -20px;">Finanças Intermediário</p>
+                                    </div>
+                                    <div class="box">
+                                        <img src="assets/db.png" alt="" class="custom-img">
+                                        <p style="margin-top: 30%; margin-bottom: -20px;">Finanças Avançado</p>
+                                    </div>
+                                    <div class="box">
+                                        <img src="assets/mkt.png" alt="" class="custom-img">
+                                        <p style="margin-top: 30%; margin-bottom: -20px;">Marketing Básico</p>
+                                    </div>
+                                    <div class="box">
+                                        <img src="assets/mkt.png" alt="" class="custom-img">
+                                        <p style="margin-top: 30%; margin-bottom: -20px;">Marketing Intermediário</p>
+                                    </div>
+                                    <div class="box">
+                                        <img src="assets/mkt.png" alt="" class="custom-img">
+                                        <p style="margin-top: 30%; margin-bottom: -20px;">Marketing Avançado</p>
+                                    </div>
+                                    <div class="box">
+                                        <img src="assets/db.png" alt="" class="custom-img">
+                                        <p style="margin-top: 30%; margin-bottom: -20px;">Recursos Humanos Básico</p>
+                                    </div>
+                                    <div class="box">
+                                        <img src="assets/db.png" alt="" class="custom-img">
+                                        <p style="margin-top: 30%; margin-bottom: -20px;">Recursos Humanos Intermediário
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr>
         </div>
     </div>
 </div>

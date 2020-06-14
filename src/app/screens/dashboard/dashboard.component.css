@@ -1,0 +1,55 @@
+.box-name{
+    padding: 24px;
+    background-color: white;
+    color: grey;
+}
+
+.box-progresso{
+    padding: 24px;
+    margin:12px;
+    background-color: white;
+    color: grey;
+    text-align: left;
+}
+
+.box-sugeridos{
+    padding: 24px;
+    margin:12px;
+    background-color: white;
+    color: grey;
+}
+
+.box{
+    text-align: center;
+    width: 15em;
+    min-width: 15em;
+    max-width: 15em;
+    border: 0.1px solid grey;
+    margin: 12px;
+    padding: 24px;
+    text-align: center;
+}
+
+.box-name h3{
+    text-decoration-line: underline;
+    font-size: 40px;
+}
+
+.box-name p {
+    line-height: 0.5;
+   }
+
+.box-progresso p {
+    line-height: 1;
+}
+
+
+
+.custom-img{
+    width: 80px;
+    height:80px;
+    min-width: 80px;
+    min-height:80px;  
+    max-width: 80px;
+    max-height:80px;  
+}
