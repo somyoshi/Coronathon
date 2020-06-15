@@ -14,7 +14,10 @@ export class Stepper8Component implements OnInit {
   faExternalLinkAlt = faExternalLinkAlt
   formModel: FormModel;
 
-  constructor(private route: ActivatedRoute) {}
+
+  constructor(private route: ActivatedRoute) {
+    this.formModel = new FormModel();
+  }
 
   ngOnInit() {
     this.init();
@@ -23,9 +26,12 @@ export class Stepper8Component implements OnInit {
 
   init() {
     this.route.params.subscribe(params => {
+      console.log(params);
       this.formModel = JSON.parse(params["formModel"]);
     });
   }
+
+
 
   
 

@@ -9,12 +9,12 @@
   <h4 class="my-3">Alimentação, Serviços, Finanças, Contabilidade, entre outros.</h4>
   <form>
     <div class="row">
-        <div class="col-md-4">
-          <div class="form-group mb-4">
-              <input type="text" class="form-control question-input" name="mercadoEmpreenderia" [(ngModel)]="formModel.mercadoEmpreenderia">
-          </div>
-          <button class="btn btn-primary" [routerLink]="['/home/intro/stepper10', {formModel:formModel | json}]">Próxima</button> pressione Enter <fa-icon [icon]="faExternalLinkAlt"></fa-icon>
+      <div class="col-md-4">
+        <div class="form-group mb-4">
+            <input type="text" class="form-control question-input" name="mercadoEmpreenderia" [(ngModel)]="formModel.mercadoEmpreenderia">
         </div>
+        <button class="btn btn-primary" [routerLink]="['/home/intro/stepper10', {formModel:formModel | json}]">Próxima</button> pressione Enter <fa-icon [icon]="faExternalLinkAlt"></fa-icon>
+      </div>
     </div>
   </form>
 </div>
