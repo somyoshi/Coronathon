@@ -12,7 +12,9 @@ export class Stepper1Component implements OnInit {
 
   formModel:FormModel = new FormModel();
 
-  constructor() { }
+  constructor() { 
+    this.formModel = new FormModel();
+  }
 
   ngOnInit(): void {
   	this.formModel.count = 1;

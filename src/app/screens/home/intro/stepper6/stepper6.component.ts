@@ -1,7 +1,7 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 import { faArrowCircleLeft } from '@fortawesome/free-solid-svg-icons';
 import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute} from '@angular/router';
 import { FormModel } from 'src/app/models/entities/form.model';
 
 @Component({
@@ -12,9 +12,11 @@ import { FormModel } from 'src/app/models/entities/form.model';
 export class Stepper6Component implements OnInit {
   faArrowCircleLeft = faArrowCircleLeft
   faExternalLinkAlt = faExternalLinkAlt
-  formModel: FormModel;
+  formModel: FormModel = new FormModel();
 
-  constructor(private route: ActivatedRoute) {}
+  constructor(private route: ActivatedRoute) {
+    this.formModel = new FormModel();
+  }
 
   ngOnInit() {
     this.init();

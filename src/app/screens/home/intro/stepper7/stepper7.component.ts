@@ -12,9 +12,11 @@ import { FormModel } from 'src/app/models/entities/form.model';
 export class Stepper7Component implements OnInit {
   faArrowCircleLeft = faArrowCircleLeft
   faExternalLinkAlt = faExternalLinkAlt
-  formModel: FormModel;
+  formModel: FormModel = new FormModel();
 
-  constructor(private route: ActivatedRoute) {}
+  constructor(private route: ActivatedRoute) {
+    this.formModel = new FormModel();
+  }
 
   ngOnInit() {
     this.init();

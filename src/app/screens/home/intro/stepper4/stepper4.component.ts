@@ -14,7 +14,9 @@ export class Stepper4Component implements OnInit {
   faExternalLinkAlt = faExternalLinkAlt
   formModel: FormModel;
 
-  constructor(private route: ActivatedRoute) {}
+  constructor(private route: ActivatedRoute) {
+    this.formModel = new FormModel();
+  }
 
   ngOnInit() {
     this.init();

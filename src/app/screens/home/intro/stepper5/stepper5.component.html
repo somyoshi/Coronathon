@@ -1,7 +1,7 @@
 <div style="margin-top:30%" id="question">
     <h3>{{ formModel.count }}/10</h3>
     <h1>
-        <a [routerLink]="['/home/intro/stepper4']" style="color:black; position: absolute; margin-left: -2em; margin-top: 0.07em; color: #444;">
+        <a [routerLink]="['/home/intro/stepper4', {formModel:formModel | json}]" style="color:black; position: absolute; margin-left: -2em; margin-top: 0.07em; color: #444;">
             <fa-icon [icon]="faArrowCircleLeft"></fa-icon>
         </a>
         

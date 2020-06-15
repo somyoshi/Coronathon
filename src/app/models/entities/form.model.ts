@@ -15,7 +15,7 @@ export class FormModel{
     mercadoEmpreenderia:string;
     vantagensEmpreender:string;
 
-    constructor(count:number = 1, nickName:string='', jaEmpreendeu:boolean = false, nome:string='', sobreNome:string='', email:string='', idade:number=0, escolaridade:string='', mercadoEmpreendeu:string='', statusProfissional:string='', habilidadesSuficientes:boolean=false, porqueEmpreender:string='', mercadoEmpreenderia:string='', vantagensEmpreender:string=''){
+    constructor(count:number = 1, nickName:string='', jaEmpreendeu:boolean = false, nome:string='', sobreNome:string='', email:string='', idade:number=0, escolaridade:string='medio', mercadoEmpreendeu:string='', statusProfissional:string='desempregado', habilidadesSuficientes:boolean=false, porqueEmpreender:string='', mercadoEmpreenderia:string='', vantagensEmpreender:string=''){
         this.count = count;
         this.nickName = nickName;
         this.jaEmpreendeu = jaEmpreendeu;
